@@ -1,0 +1,67 @@
+Algoritmo Ejercicio11
+	
+	nImpares = 0
+	nPares = 0
+	n2docena = 0
+	numeroMayor = 0
+	n = 0
+	sumaPares = 0
+	
+	Hacer
+		
+		Escribir "Ingrese un numero del 0 al 36"
+		leer num 
+		
+		si num >= 0 y num <= 36 Entonces
+			
+			si num mod 2 != 0 Entonces
+				
+				nImpares = nImpares + 1
+				
+			FinSi
+			
+			si num mod 2 == 0 Entonces
+				
+				si num > 0 y num <= 36 Entonces
+					
+					nPares = nPares + 1
+					sumaPares = sumaPares + num 
+					
+				FinSi
+				
+			FinSi
+			
+			Si num >= 13 y num <= 24 Entonces
+				
+				n2docena = n2docena + 1
+				
+			FinSi
+			
+			Si num > numeroMayor Entonces
+				
+				si num >= 0 y num <= 36 Entonces
+					
+					numeroMayor = num
+					
+				FinSi
+				
+			FinSi
+			
+		SiNo
+			
+			Escribir "Debe ingresar un numero del 0 al 36"
+			
+		FinSi
+		
+		n = n + 1
+		
+	Hasta Que n = 11
+	
+	PromedioPares = sumaPares / nPares
+	
+	Escribir "Cantidad de numeros impares: " nImpares
+	Escribir "Promedio de numeros pares: " PromedioPares
+	Escribir "Cantidad de numeros de la 2da. docena: " n2docena
+	Escribir "El numero mas grande es: " numeroMayor
+	
+FinAlgoritmo
